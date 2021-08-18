@@ -51,7 +51,7 @@ public class TaskScheduler {
             } catch (Exception e) {
                 if (retryCounter >= maxRetry) {
                     log.error("retry failed");
-                    emailService.sendHtmlMessage(new String[]{"rashasoft_operation@gmail.com"},"Scheduler failed",e.getMessage());
+                    emailService.sendHtmlMessage("Scheduler failed",e.getMessage());
                 }
             }
         }

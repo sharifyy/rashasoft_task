@@ -25,6 +25,6 @@ class TaskSchedulerTest {
         scheduler.schedule();
         Thread.sleep(100);
         Mockito.verify(emailService,Mockito.times(1))
-                .sendHtmlMessage(Mockito.any(),Mockito.anyString(),Mockito.anyString());
+                .sendHtmlMessage(Mockito.anyString(),Mockito.anyString());
     }
 }

@@ -15,10 +15,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class SchedulerService {
 
     private final Map<String,TaskScheduler> schedulers = new ConcurrentHashMap<>();
-//    private final EmailService emailService;
 
     public void creatTask(final TaskScheduler scheduler ,final String taskId){
-//        TaskScheduler scheduler = new TaskScheduler(task,command.getGenerationPeriod(),command.getTimeUnit(),command.getMaxRetry(),emailService);
         if(schedulers.get(taskId)!=null){
             log.info("Task already exists");
             return;

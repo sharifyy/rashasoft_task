@@ -31,7 +31,6 @@ public final class TemplateGenerator implements Task {
             MainDocumentPart documentPart = wordMLPackage.getMainDocumentPart();
 
             VariablePrepare.prepare(wordMLPackage);
-            if(true) throw new Exception(":(");
             documentPart.variableReplace(templateData);
             os = new FileOutputStream(outputDirectory + "/generatedTemplate_" + UUID.randomUUID() + ".pdf");
             Docx4J.toPDF(wordMLPackage, os);
